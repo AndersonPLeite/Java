@@ -6,6 +6,9 @@ package model;
 
     public Conta() {
     }
+    public Conta(Integer id) {
+        this.id = id;
+    }
 
     public Conta(Integer id, Double saldo) {
         this.id = id;
@@ -31,7 +34,11 @@ package model;
         return saldo;
     }
 
-    public void deposita(Double valor){
+        public void setSaldo(Double saldo) {
+            this.saldo = saldo;
+        }
+
+        public void deposita(Double valor){
 
         this.saldo = valor;
     }

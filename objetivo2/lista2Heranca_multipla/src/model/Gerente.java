@@ -20,12 +20,22 @@ public class Gerente  extends Funcionario implements Investidor{
     }
 
     @Override
+    public int quantidade() {
+        return 0;
+    }
+
+    @Override
     public String getTicker() {
         return "";
     }
 
     @Override
     public void setTicker(String ticker) {
+
+    }
+
+    @Override
+    public void quantidade(int qtdeCotas) {
 
     }
 
