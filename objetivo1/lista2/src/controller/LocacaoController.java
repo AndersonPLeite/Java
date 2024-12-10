@@ -19,6 +19,8 @@ public class LocacaoController {
 
         Locacao locacao6 = new Locacao(3, LocalDateTime.now(), "2021-10-10", "10:00", 100, 100.0, 100.0, false);
         Locacao locacao7 = new Locacao(8,false);
+
+
         System.out.println(locacao1);
         System.out.println(locacao2);
         System.out.println(locacao3);
@@ -99,17 +101,12 @@ public class LocacaoController {
         System.out.println("\nLista de locações: ");
 
         for (Locacao locacao : locacoesList) {
-            if(locacao.getId() == 4) {
-                System.out.println("Pesquisa  brute force pelo id=4: ");
+            if(locacao.getId() == 3) {
+                System.out.println("Pesquisa  brute force pelo id=3: ");
                 System.out.println(locacao);
             }
         }
 
-        System.out.println();
-        System.out.print("Localizando pelo id=4:(método fluxos para estrutura de dados) ");
-        Locacao locacaoFind = locacoesList.stream().filter(c -> c.getId() == 4).findAny().orElse(null);
-        System.out.println(locacaoFind);
-        System.out.println();
 
 
 
@@ -125,5 +122,12 @@ public class LocacaoController {
         System.out.println();
         System.out.println(locacoesMap.get(3));
         System.out.println(locacoesMap.get(4));
+
+        System.out.println();
+        System.out.print("Localizando pelo id=3:");
+        Locacao locacaoFind = locacoesList.stream().filter(c -> c.getId() == 3).findAny().orElse(null);
+        System.out.println(locacaoFind);
+        System.out.println();
+
     }
 }
