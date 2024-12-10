@@ -112,8 +112,9 @@ public class Automovel {
 
     @Override
     public String toString() {
-        return "\nAutomovel{" +
-                "renavan='" + renavan + '\'' +
+        return "Automovel{" +
+                "id=" + id +
+                ", renavan='" + renavan + '\'' +
                 ", placa='" + placa + '\'' +
                 ", cor='" + cor + '\'' +
                 ", num_rodas=" + num_rodas +
