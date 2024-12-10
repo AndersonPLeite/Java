@@ -8,8 +8,6 @@ import model.Investidor;
 import model.Desenvolvedor;
 import model.Cliente;
 
-import model.Desenvolvedor;
-
 public class FuncionarioController {
     public static void main(String[] args) {
         Desenvolvedor dev1 = new Desenvolvedor("João", 2500.00);

@@ -6,9 +6,7 @@ public class Desenvolvedor extends Funcionario{
     }
 
     public Desenvolvedor(String nome, double salario){
-
-        this.nome = nome;
-       this.salario = salario;
+        super(nome, salario);
     }
 
     @Override

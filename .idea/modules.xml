@@ -4,10 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/objetivo1/lista1/lista1.iml" filepath="$PROJECT_DIR$/objetivo1/lista1/lista1.iml" />
       <module fileurl="file://$PROJECT_DIR$/objetivo1/lista2/lista2.iml" filepath="$PROJECT_DIR$/objetivo1/lista2/lista2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/objetivo2/lista2Heranca_multipla/lista2Heranca_multipla.iml" filepath="$PROJECT_DIR$/objetivo2/lista2Heranca_multipla/lista2Heranca_multipla.iml" />
-      <module fileurl="file://$PROJECT_DIR$/objetivo2/objetivo2.iml" filepath="$PROJECT_DIR$/objetivo2/objetivo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivoDois/lista2Heranca_multipla/lista2Heranca_multipla.iml" filepath="$PROJECT_DIR$/objetivoDois/lista2Heranca_multipla/lista2Heranca_multipla.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo2/objetivo2-herancaSimples.iml" filepath="$PROJECT_DIR$/objetivo2/objetivo2-herancaSimples.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/objetivos.iml" filepath="$PROJECT_DIR$/.idea/objetivos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/objetivo2/polimorfismo/polimorfismo.iml" filepath="$PROJECT_DIR$/objetivo2/polimorfismo/polimorfismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivoDois/polimorfismo/polimorfismo.iml" filepath="$PROJECT_DIR$/objetivoDois/polimorfismo/polimorfismo.iml" />
     </modules>
   </component>
 </project>
