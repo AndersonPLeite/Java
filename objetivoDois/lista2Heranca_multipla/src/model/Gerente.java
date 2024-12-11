@@ -40,12 +40,31 @@ public class Gerente  extends Funcionario implements Investidor{
     }
 
     @Override
+    public int getQuantidade() {
+        return 0;
+    }
+
+    @Override
+    public void setQuantidade(int qtdeCotas) {
+
+    }
+
+    @Override
     public int getQtdeCotas() {
+
         return qtdeCotas;
     }
 
     @Override
     public void setQtdeCotas(int qtdeCotas) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Gerente{" +
+                "ticker='" + ticker + '\'' +
+                ", qtdeCotas=" + qtdeCotas +
+                "} " + super.toString();
     }
 }

@@ -14,8 +14,9 @@ public class Desenvolvedor extends Funcionario {
 
     @Override
     public double getBonus() {
-        return this.salario * 0.05;
+        return 0;
     }
+
 
     @Override
     public int quantidade() {
@@ -26,7 +27,7 @@ public class Desenvolvedor extends Funcionario {
     public String toString() {
         return "Desenvolvedor{" +
                 "Nome=  " +getNome() +
-                ", Salario= " + NumberFormat.getCurrencyInstance().format(this.salario) +
+                ", Salario= " + NumberFormat.getCurrencyInstance().format(this.getSalario()) +
                 ", Bonus= " + NumberFormat.getCurrencyInstance().format(getBonus()) +
                 '}';
     }

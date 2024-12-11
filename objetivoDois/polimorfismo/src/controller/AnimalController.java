@@ -10,6 +10,8 @@ import java.util.List;
 
 public class AnimalController {
     public static void main(String args[]) {
+
+        //1.b
         Cachorro c1 = new Cachorro(1, 1);
         Cachorro c2 = new Cachorro(1, 1);
         Cachorro c3 = new Cachorro(2, 2);
@@ -33,10 +35,10 @@ public class AnimalController {
 
         System.out.println("\nAnimais criados: " + animaisList);
 
-
+        //1.c
         animaisList.forEach(
                 a -> {
-                    a.mover(8.0, 8.0);
+                    a.mover(2.0, 2.0);
                     a.desenhar();
                     System.out.print(a);
                 }
@@ -44,6 +46,16 @@ public class AnimalController {
 
         System.out.println("\nAnimais movidos: " + animaisList);
 
+        //1.d
+        animaisList.forEach(a -> {
+             if (a instanceof Cachorro) {
+                a.mover(8.0, 8.0);
+                a.desenhar();
+                System.out.print(a);
+            }
+        });
+
+        //1.e
         animaisList.forEach(
                 a -> {
                     if (a instanceof Peixe) {

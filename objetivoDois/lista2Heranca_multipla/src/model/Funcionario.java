@@ -1,8 +1,8 @@
 package model;
 
 public abstract class  Funcionario {
-        protected String nome;
-        protected double salario;
+        private String nome;
+        private double salario;
 
 
         public Funcionario(){

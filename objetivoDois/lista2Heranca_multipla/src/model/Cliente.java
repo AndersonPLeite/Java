@@ -53,6 +53,21 @@ public class Cliente  implements Investidor{
     }
 
     @Override
+    public void quantidade(int quantidade) {
+
+    }
+
+    @Override
+    public int getQuantidade() {
+        return 0;
+    }
+
+    @Override
+    public void setQuantidade(int qtdeCotas) {
+
+    }
+
+    @Override
     public int getQtdeCotas() {
         return qtdeCotas;
     }

@@ -10,6 +10,8 @@ import model.Cliente;
 
 public class FuncionarioController {
     public static void main(String[] args) {
+
+        //1.c
         Desenvolvedor dev1 = new Desenvolvedor("João", 2500.00);
         Desenvolvedor dev2 = new Desenvolvedor("Maria", 2500.00);
         Desenvolvedor dev3 = new Desenvolvedor("José", 2500.00);
@@ -18,7 +20,7 @@ public class FuncionarioController {
         Desenvolvedor dev6 = new Desenvolvedor("Paula", 2500.00);
 
         System.out.println("\nDesenvolvedores: ");
-        System.out.println(dev1 + " " + dev2 + " " + dev3 + " " + dev4 + " " + dev5 + " " + dev6);
+        System.out.println(dev1 + "\n" + dev2 + "\n" + dev3 + "\n" + dev4 + "\n" + dev5 + "\n" + dev6);
 
 
         Gerente g1 = new Gerente("Pedro", 5000.00, "PETR4", 100);
@@ -29,7 +31,7 @@ public class FuncionarioController {
         Gerente g6 = new Gerente("Luciana", 7000.00, "ABEV3", 600);
 
         System.out.println("\nGerentes: ");
-        System.out.println(g1 + " " + g2 + " " + g3 + " " + g4 + " " + g5 + " " + g6);
+        System.out.println(g1 + "\n" + g2 + "\n" + g3 + "\n" + g4 + "\n" + g5 + "\n" + g6);
 
         Cliente cl1 = new Cliente(1, "João", "Campagnaro", "PETR4", 170);
         Cliente cl2 = new Cliente(2, "Maria", "Silva", "VALE3", 240);
@@ -38,8 +40,10 @@ public class FuncionarioController {
         Cliente cl5 = new Cliente(5, "Carlos", "Silva", "BBAS3", 570);
         Cliente cl6 = new Cliente(6, "Paula", "Relisclark", "ABEV3", 300);
         System.out.println("\nClientes: ");
-        System.out.println(cl1 + " " + cl2 + " " + cl3 + " " + cl4 + " " + cl5 + " " + cl6);
+        System.out.println(cl1 + "\n" + cl2 + "\n" + cl3 + "\n" + cl4 + "\n" + cl5 + "\n" + cl6);
 
+
+        //1.d
         List<Funcionario> funcionariosList = new ArrayList<>();
         funcionariosList.add(dev1);
         funcionariosList.add(dev2);
@@ -49,9 +53,7 @@ public class FuncionarioController {
         funcionariosList.add(dev6);
         funcionariosList.add(g1);
         funcionariosList.add(g2);
-
-
-        System.out.println("\nColeção de Funcionários: " + funcionariosList);
+        funcionariosList.add(g6);
 
 
         List<Investidor> investidoresList = new ArrayList<>();
@@ -61,33 +63,43 @@ public class FuncionarioController {
         investidoresList.add(cl4);
         investidoresList.add(cl5);
         investidoresList.add(cl6);
+
+        //1.e
+        System.out.println("\nColeção de Funcionários: " + funcionariosList);
         System.out.println("\nColeção de Investidores: " + investidoresList);
 
-        System.out.println("\nLista de funcionários da empresa: ");
-
+        //1.f
         funcionariosList.sort(Comparator.comparing(Funcionario::getSalario).reversed());
         System.out.println("Lista de funcionários da empresa: " + funcionariosList);
 
-        System.out.println("\nLista de investidores da empresa: ");
-        investidoresList.sort(Comparator.comparing(Investidor::getQtdeCotas).reversed());
+        //1.g
+        System.out.println("\nLista de investidores da empresa ordenado pelo número de cotas: ");
+        investidoresList.sort(Comparator.comparing(Investidor::getQuantidade).reversed());
         System.out.println(investidoresList);
 
-        System.out.print("\nFuncionario (s) com maior salário: ");
-        System.out.print("\nResolvendo com o forEach do Java 8+");
-        Funcionario f_maior_salario = Collections.max(funcionariosList, Comparator.comparing(Funcionario::getSalario)); //primeiro determina o maior
-        funcionariosList.forEach(f -> { //depois compara o maior com cada objeto da coleção
-            if (f.getSalario() >= f_maior_salario.getSalario()) {
-                System.out.print(f);
+        //1.h
+        investidoresList.sort(Comparator.comparing(Investidor::getQtdeCotas).reversed());
+        System.out.println("\nLista de investidores da empresa ordenado pelo número de cotas: ");
+        System.out.println(investidoresList);
+
+        //1.i
+        Funcionario funcionarioComMaiorSalario = Collections.max(funcionariosList, Comparator.comparing(Funcionario::getSalario));
+        funcionariosList.forEach(f -> {
+            if(f.getSalario() == funcionarioComMaiorSalario.getSalario()){
+                System.out.println("Funcionário com maior salário: " + f.getNome() + "\n" + "R$ " + f.getSalario());
             }
+        });
 
-            /*Investidor maior_cotas = Collections.max(investidoresList, Comparator.comparing(Investidor::getQtdeCotas));
-            investidoresList.forEach(investidor -> {
-                if (investidor.getQtdeCotas() > maior_cotas.getQtdeCotas()) {
-                    System.out.println("\nInvestidor com maior quantidade de cotas: " + maior_cotas);
-                }
-            });
-            */
 
+        //1.j
+        Investidor investidorMaisCotas = investidoresList.stream().max(Comparator.comparing(Investidor::getQtdeCotas)).get();
+        System.out.println("\nInvestidor com mais cotas: " + investidorMaisCotas);
+
+        Investidor iMaisCotas = Collections.max(investidoresList, Comparator.comparing(Investidor::getQtdeCotas));
+        investidoresList.forEach(i -> {
+            if(i.getQtdeCotas() == iMaisCotas.getQtdeCotas()){
+                System.out.println("Investidor com mais cotas: " + i);
+            }
         });
     }
 
