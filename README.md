@@ -1,2 +1,2 @@
-# curso Dio
-Repositório destinado aos cursos da plataforma Dio.
+# Java Exercises
+Repositório destinado a prática da linguagem Java
